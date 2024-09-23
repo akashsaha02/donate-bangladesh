@@ -5,12 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate BD Home</title>
-    <script defer src="./js/script.js"></script>
+    <!-- font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisyui import -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind config -->
     <script>
         tailwind.config = {
             theme: {
@@ -26,6 +28,7 @@
             }
         }
     </script>
+    <!-- custom css -->
     <style>
         .lexend {
             font-family: "Lexend", sans-serif;
@@ -55,7 +58,7 @@
                 <span id="accountBalance" class="text-lg font-semibold text-text-primary flex gap-2 items-center">
                     <img src="./assets/coin.png" alt="balance" class="w-6 inline">
                     <span>
-                        <span id="balanceAmount">500</span> BDT
+                        <span id="balanceAmount">5500</span> BDT
                     </span>
                 </span>
             </div>
@@ -71,22 +74,8 @@
         </div>
     </div>
 
-
-
-
     <!-- Donation Cards Section -->
     <div id="donationSection" class="max-w-6xl px-5 mx-auto grid grid-cols-1 gap-6 p-4 mb-10 md:mb-20">
-        <!-- <div class="bg-white p-6 shadow-lg rounded-lg">
-            <img src="donation1.jpg" class="w-full h-40 object-cover" alt="Donation Image">
-            <h2 class="text-xl font-semibold mt-4 text-text-primary">Donation 1</h2>
-            <p class="text-gray-600">Support local education programs.</p>
-            <p class="text-green-600 mt-2">Current Donation: $<span id="donation1">100</span></p>
-            <input id="donationInput1" type="number" placeholder="Enter amount"
-                class="w-full px-2 py-1 border border-gray-300 rounded-md mt-2" />
-            <button onclick="donate(1)" class="mt-2 w-full bg-blue-500 text-white py-2 rounded-md">Donate Now</button>
-        </div> -->
-
-
         <!-- Card-1 -->
         <div
             class=" grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center p-4 md:p-8 border-gray-300 border rounded-xl">
@@ -169,6 +158,27 @@
             
         </ul>
     </div>
+
+    <!-- Modal -->
+    <dialog id="my_modal_4" class="modal">
+        <div class="modal-box  max-w-2xl">
+            <div class="flex flex-col justify-center items-center">
+                <h2 class="text-2xl font-bold text-center">Congrates!</h2>
+                <img src="./assets/coin.png" class="w-10 my-6" alt="">
+                <p class="">You have donated to human kind</p>
+                <div class="modal-action">
+                    <form method="dialog" class="flex justify-center items-center">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- JavaScript  -->
+    <script  src="./js/script.js"></script>
+
 
 </body>
 
