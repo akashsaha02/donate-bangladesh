@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donation Website</title>
+    <title>Donate BD Home</title>
     <script defer src="./js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -60,10 +61,12 @@
             </div>
         </nav>
         <!-- Buttons for Donation and History -->
-        <div class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
-            <button id="donationBtn" class="px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
-            <button id="historyBtn"
-                class="px-4 py-2  text-text-primary border border-gray-200 rounded-md font-bold">History</button>
+        <div class="bg-white">
+            <div class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
+                <button id="donationBtn" class="px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
+                <button id="historyBtn"
+                    class="px-4 py-2  text-text-primary border border-gray-200 rounded-md font-bold">History</button>
+            </div>
         </div>
     </div>
 
@@ -71,7 +74,7 @@
 
 
     <!-- Donation Cards Section -->
-    <div id="donationSection" class="max-w-6xl px-5 mx-auto grid grid-cols-1 gap-6 p-4">
+    <div id="donationSection" class="max-w-6xl px-5 mx-auto grid grid-cols-1 gap-6 p-4 mb-10 md:mb-20">
         <!-- <div class="bg-white p-6 shadow-lg rounded-lg">
             <img src="donation1.jpg" class="w-full h-40 object-cover" alt="Donation Image">
             <h2 class="text-xl font-semibold mt-4 text-text-primary">Donation 1</h2>
@@ -162,17 +165,24 @@
     <!-- History Section (Initially hidden) -->
     <div id="historySection" class=" max-w-6xl px-5 mx-auto hidden p-4">
         <ul id="historyList" class="list-none">
-            <!-- Transaction logs will be appended here -->
-            <!-- <li class=" p-4 md:p-8 border-gray-300 border rounded-xl">
-                <div class="space-y-3">
-                    <h2 class="text-text-primary font-bold text-xl"><span>9500</span> Taka is Donated for <span>Flood
-                            Relief in Feni,Bangladesh</span></h2>
-                    <p class="text-text-gray">Date: <span className="">Tue Sep 17 2024 08:39:11 GMT +0600
-                            (Bangladesh Standard Time)</span></p>
-                </div>
-            </li> -->
+            \
         </ul>
     </div>
+
+    <!-- Modal -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 </body>
 
 </html>

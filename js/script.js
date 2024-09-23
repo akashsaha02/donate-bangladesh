@@ -46,23 +46,16 @@ function donate(cardId) {
     const newDonationAmount = parseFloat(currentDonation.textContent) + donationAmount;
     currentDonation.textContent = newDonationAmount;
 
-    // Add to history
-    // addToHistory(`Donated $${donationAmount} to Donation ${cardId}`);
 
     addToHistory(donationAmount, cardId);
 
     // Clear the input field
     donationInput.value = '';
+
+    alert('Donation Successful!');
 }
 
-// Add a transaction to history
-// function addToHistory(message) {
-//     const historyList = document.getElementById('historyList');
-//     const timestamp = new Date().toLocaleString();
-//     const listItem = document.createElement('li');
-//     listItem.textContent = `${timestamp}: ${message}`;
-//     historyList.appendChild(listItem);
-// }
+
 
 function addToHistory(donationAmount, cartId) {
     const historyList = document.getElementById('historyList');

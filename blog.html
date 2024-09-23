@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
-    <script defer src="./js/script.js"></script>
+    <title>Donate BD Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -53,92 +53,55 @@
 
     <!-- FAQ Section -->
     <div class=" max-w-6xl px-5 mx-auto">
-        <h2 class="text-3xl font-bold mb-4">Important FAQ</h2>
-
-        <div class="mb-6">
-            <h3 class="text-2xl font-semibold">What is the Document Object Model (DOM)?</h3>
-            <p class="text-gray-600">The DOM is a programming interface for web documents that allows programs to update
-                the structure, content, and style of a document dynamically.</p>
-        </div>
-
-        <div class="mb-6">
-            <h3 class="text-2xl font-semibold">How do you select an element from the DOM?</h3>
-            <p class="text-gray-600">You can select elements using methods like `getElementById`,
-                `getElementsByClassName`, `querySelector`, etc.</p>
-        </div>
-
-        <div class="mb-6">
-            <h3 class="text-2xl font-semibold">What is event delegation in the context of the DOM, and why is it useful?
-            </h3>
-            <p class="text-gray-600">Event delegation is a technique where a single event listener is used to handle
-                events at a higher level in the DOM, useful for dynamic elements.</p>
-        </div>
-
-        <div class="mb-6">
-            <h3 class="text-2xl font-semibold">How do you manipulate an element's attributes and styles using the DOM?
-            </h3>
-            <p class="text-gray-600">You can manipulate an element’s attributes using methods like `setAttribute`,
-                `removeAttribute`, and manipulate styles using the `style` property.</p>
-        </div>
+        <h2 class="text-3xl font-bold mb-4 my-5 md:my-10">Important FAQ</h2>
 
 
 
-        <div class="border-b border-slate-200">
-            <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
-                <span>What is Material Tailwind?</span>
-                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="pb-5 text-sm text-slate-500">
-                    Material Tailwind is a framework that enhances Tailwind CSS with additional styles and components.
+
+        <div class="space-y-3 mt-5 md:mt-10">
+
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>The DOM is a programming interface for web documents that allows programs to update
+                        the structure, content, and style of a document dynamically.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Accordion Item 2 -->
-        <div class="border-b border-slate-200">
-            <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
-                <span>How to use Material Tailwind?</span>
-                <span id="icon-2" class="text-slate-800 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="pb-5 text-sm text-slate-500">
-                    You can use Material Tailwind by importing its components into your Tailwind CSS project.
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>You can select elements using methods like `getElementById`,
+                        `getElementsByClassName`, `querySelector`, etc.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Accordion Item 3 -->
-        <div class="border-b border-slate-200">
-            <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
-                <span>What can I do with Material Tailwind?</span>
-                <span id="icon-3" class="text-slate-800 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd"
-                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-            </button>
-            <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div class="pb-5 text-sm text-slate-500">
-                    Material Tailwind allows you to quickly build modern, responsive websites with a focus on design.
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
+                <div class="collapse-content">
+                    <p>Event delegation is a technique where a single event listener is used to handle
+                        events at a higher level in the DOM, useful for dynamic elements.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
+                <div class="collapse-content">
+                    <p>You can manipulate an element's attributes using methods like `setAttribute`,
+                        `removeAttribute`, and manipulate styles using the `style` property.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer >
+
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/blog.js"></script>
 </body>
 
 </html>
