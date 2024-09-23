@@ -63,7 +63,8 @@
         <!-- Buttons for Donation and History -->
         <div class="bg-white">
             <div class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
-                <button id="donationBtn" class="px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
+                <button id="donationBtn"
+                    class="px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
                 <button id="historyBtn"
                     class="px-4 py-2  text-text-primary border border-gray-200 rounded-md font-bold">History</button>
             </div>
@@ -170,19 +171,24 @@
     </div>
 
     <!-- Modal -->
-    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
-    <dialog id="my_modal_1" class="modal">
-      <div class="modal-box">
-        <h3 class="text-lg font-bold">Hello!</h3>
-        <p class="py-4">Press ESC key or click the button below to close</p>
-        <div class="modal-action">
-          <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close</button>
-          </form>
+    <!-- You can open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
+    <dialog id="my_modal_4" class="modal">
+        <div class="modal-box  max-w-2xl">
+            <div class="flex flex-col justify-center items-center">
+                <h2 class="text-2xl font-bold text-center">Congrates!</h2>
+                <img src="./assets/coin.png" class="w-10 my-6" alt="">
+                <p class="">You have donated to human kind</p>
+                <div class="modal-action">
+                    <form method="dialog" class="flex justify-center items-center">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close confirmation</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </dialog>
+
 </body>
 
 </html>

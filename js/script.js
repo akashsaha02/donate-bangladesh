@@ -52,7 +52,7 @@ function donate(cardId) {
     // Clear the input field
     donationInput.value = '';
 
-    alert('Donation Successful!');
+    my_modal_4.showModal();
 }
 
 
