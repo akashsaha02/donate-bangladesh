@@ -39,37 +39,39 @@
 
 <body class="lexend">
     <!-- Navbar -->
-    <div class="bg-bg-nav sticky top-0 z-50 shadow">
-        <nav class="max-w-6xl px-5 mx-auto py-8 flex justify-between items-center">
-            <!-- Blog Link -->
-            <a href="blog.html"
-                class="text-lg bg-lime px-6 py-2 rounded-lg font-bold hover:bg-lime-600 transition-colors">
-                Blog
-            </a>
+    <div class=" sticky top-0 z-50 shadow">
+        <div class="bg-bg-nav">
+            <nav class="max-w-6xl px-5 mx-auto py-8 flex justify-between items-center">
+                <!-- Blog Link -->
+                <a href="blog.html"
+                    class="text-lg bg-lime px-6 py-2 rounded-lg font-bold hover:bg-lime-600 transition-colors">
+                    Blog
+                </a>
 
-            <!-- Logo and Title -->
-            <div class="text-center flex items-center gap-3">
-                <img src="./assets/logo.png" class="w-10" alt="Donate Bangladesh Logo">
-                <p class="text-lg font-bold hidden md:block">Donate Bangladesh</p>
-            </div>
+                <!-- Logo and Title -->
+                <div class="text-center flex items-center gap-3">
+                    <img src="./assets/logo.png" class="w-10" alt="Donate Bangladesh Logo">
+                    <p class="text-lg font-bold hidden md:block">Donate Bangladesh</p>
+                </div>
 
-            <!-- Account Balance -->
-            <div class="flex space-x-4 items-center">
-                <span id="accountBalance" class="text-lg font-semibold text-text-primary flex gap-2 items-center">
-                    <img src="./assets/coin.png" alt="balance" class="w-6 inline">
-                    <span>
-                        <span id="balanceAmount">5500</span> BDT
+                <!-- Account Balance -->
+                <div class="flex space-x-4 items-center">
+                    <span id="accountBalance" class="text-lg font-semibold text-text-primary flex gap-2 items-center">
+                        <img src="./assets/coin.png" alt="balance" class="w-6 inline">
+                        <span>
+                            <span id="balanceAmount">5500</span> BDT
+                        </span>
                     </span>
-                </span>
-            </div>
-        </nav>
+                </div>
+            </nav>
+        </div>
         <!-- Buttons for Donation and History -->
-        <div class="bg-white">
+        <div class=" backdrop-blur-xl">
             <div class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
                 <button id="donationBtn"
                     class="px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
                 <button id="historyBtn"
-                    class="px-4 py-2  text-text-primary border border-gray-200 rounded-md font-bold">History</button>
+                    class="px-4 py-2  text-text-primary border border-gray-500 rounded-md font-bold">History</button>
             </div>
         </div>
     </div>
@@ -85,7 +87,7 @@
             <div class="text-text-gray space-y-4">
                 <span class="flex items-center gap-2 bg-card-gray px-4 py-2 rounded-xl w-40">
                     <img src="./assets/coin.png" alt="">
-                    <p><span id="donation1">100</span> BDT</p>
+                    <p><span id="donation1">0</span> BDT</p>
                 </span>
                 <h2 class="text-text-primary font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
                 <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation
@@ -108,7 +110,7 @@
             <div class="text-text-gray space-y-4">
                 <span class="flex items-center gap-2 bg-card-gray px-4 py-2 rounded-xl w-40">
                     <img src="./assets/coin.png" alt="">
-                    <p><span id="donation2">100</span> BDT</p>
+                    <p><span id="donation2">600</span> BDT</p>
                 </span>
                 <h2 class="text-text-primary font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
                 <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss.
@@ -133,7 +135,7 @@
             <div class="text-text-gray space-y-4">
                 <span class="flex items-center gap-2 bg-card-gray px-4 py-2 rounded-xl w-40">
                     <img src="./assets/coin.png" alt="">
-                    <p><span id="donation3">100</span> BDT</p>
+                    <p><span id="donation3">2400</span> BDT</p>
                 </span>
                 <h2 class="text-text-primary font-bold text-xl">Aid for Injured in the Quota Movement</h2>
                 <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many
@@ -152,10 +154,11 @@
 
     </div>
 
+
     <!-- History Section (Initially hidden) -->
     <div id="historySection" class=" max-w-6xl px-5 mx-auto hidden p-4">
         <ul id="historyList" class="list-none">
-            
+
         </ul>
     </div>
 
@@ -166,6 +169,8 @@
                 <h2 class="text-2xl font-bold text-center">Congrates!</h2>
                 <img src="./assets/coin.png" class="w-10 my-6" alt="">
                 <p class="">You have donated to human kind</p>
+                <h2 class="text-2xl font-bold text-center mt-4 ">Successfully</h2>
+
                 <div class="modal-action">
                     <form method="dialog" class="flex justify-center items-center">
                         <!-- if there is a button in form, it will close the modal -->
@@ -175,9 +180,13 @@
             </div>
         </div>
     </dialog>
-
+    <footer class="footer footer-center bg-bg-nav h-28 text-base-content p-4">
+        <aside>
+            <p>Copyright © 2024 - All right reserved by Akash Saha</p>
+        </aside>
+    </footer>
     <!-- JavaScript  -->
-    <script  src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 
 
 </body>
