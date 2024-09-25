@@ -5,12 +5,14 @@ document.getElementById('balanceAmount').textContent = balance;
 document.getElementById('donationBtn').addEventListener('click', () => {
     document.getElementById('donationSection').classList.remove('hidden');
     document.getElementById('historySection').classList.add('hidden');
+    document.getElementById('footer-id').classList.remove('hidden');
     toggleButtonActive('donationBtn', 'historyBtn');
 });
 
 document.getElementById('historyBtn').addEventListener('click', () => {
     document.getElementById('donationSection').classList.add('hidden');
     document.getElementById('historySection').classList.remove('hidden');
+    document.getElementById('footer-id').classList.add('hidden');
     toggleButtonActive('historyBtn', 'donationBtn');
 });
 
