@@ -30,14 +30,14 @@ function donate(cardId) {
     const donationAmount = parseFloat(donationInput.value);
 
     if (isNaN(donationAmount) || donationAmount <= 0) {
-        alert('Please enter a valid amount.');
         donationInput.value = '';
+        alert('Please enter a valid amount.');
         return;
     }
 
     if (donationAmount > balance) {
-        alert('Insufficient balance.');
         donationInput.value = '';
+        alert('Insufficient balance.');
         return;
     }
 
