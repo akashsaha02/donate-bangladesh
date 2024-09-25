@@ -31,11 +31,13 @@ function donate(cardId) {
 
     if (isNaN(donationAmount) || donationAmount <= 0) {
         alert('Please enter a valid amount.');
+        donationInput.value = '';
         return;
     }
 
     if (donationAmount > balance) {
         alert('Insufficient balance.');
+        donationInput.value = '';
         return;
     }
 
